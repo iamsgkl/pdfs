@@ -1,0 +1,50 @@
+driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
+
+WebdriverWait wait = new WebDriverWait(driver, 4);
+wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ssssssss")));
+
+Wait <WebDriver> fW = new FluentWait <WebDriver>(driver)
+			.withTimeout(Duration.ofSeconds(4))
+			.pollingEvery(Duration.ofSeconds(4))
+			.ignoring(NoSuchElementException.class);
+fW.until(ExpectedConditions.presenceOfElementLocated(By.id("ssssssssss")));
+
+String parent=driver.getWindowHandle();
+driver.findElement(By.id("sssssss")).click();
+Set<String> children= driver.getWindowHandles();
+for(String child : children) {
+	if(!parent.equals(child))
+		driver.switchTo().window(child); }
+
+String result=a>b?"a is greater":"b is greater";
+System.out.print(result);
+
+int a=2,b=1;
+a=a+b; //a=3, b=1
+b=a-b; //a=3, b=2
+a=a-b; //a=1, b=2
+System.out.print(a+"	"+b);
+
+Actions action = new Actions(driver);
+action.keyDown(Keys.CONTROL);
+
+action.moveToElement(element).keyDown(Keys.CONTROL).click().perform();
+
+File file = ((TakeScreenshot)driver).getScreenshotAs(OutputType.FILE);
+FileUtils.copyFile(file, new File("path/name");
+
+JavascriptExecuter js= (JavascriptExecutor)driver;
+js.executeScript("arguments[0].style.border='3px solid red'", element);
+
+for(Map.Entry<Integer, String> entry : map.entrySet())
+
+
+public class Main {
+    public static void main(String[] args) {
+        Square lambda = (x,y) -> x*y;
+        System.out.print(lambda.main(5,3));
+    }
+}
+interface Square {
+    int main(int x, int y);
+}
